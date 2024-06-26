@@ -34,11 +34,23 @@ export const oauth = (
       const codeVerifier = createRandomKey(128);
       const codeChallenge = generateCodeChallenge(codeVerifier);
 
+      const queryParams: operations['OAuthController_authorize']['parameters']['query'] =
+        {
+          responseType: 'code',
+          clientId,
+          callbackUri: redirectUrl,
+          state: csrfState,
+          challengeMethod: 'S256',
+          challenge: codeChallenge,
+        };
+
       return {
         csrfState,
         codeVerifier,
         codeChallenge,
-        url: `${DEFAULT_HOST}/oauth/authorize?response_type=code&client_id=${clientId}&redirect_uri=${redirectUrl}&state=${csrfState}&code_challenge_method=S256&code_challenge=${codeChallenge}`,
+        url: `${DEFAULT_HOST}/oauth/authorize?${new URLSearchParams(
+          queryParams
+        ).toString()}`,
       } as IAuthorize;
     },
 

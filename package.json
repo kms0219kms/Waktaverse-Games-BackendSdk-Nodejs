@@ -54,6 +54,9 @@
     "tsup": "^8.0.2",
     "typescript": "~5.4.5"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "tsup": {
     "entry": [
       "src/index.ts"
