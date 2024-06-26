@@ -1,0 +1,68 @@
+{
+  "name": "@wakgames/gamesdk",
+  "version": "1.0.0",
+  "description": "Node.js 사용자의 Waktaverse Games의 팬게임 연동 기능을 위한 SDK 모듈입니다.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wakgames/Waktaverse-Games-GameSdk-Nodejs.git"
+  },
+  "keywords": [
+    "wakgames",
+    "waktaverse",
+    "rest",
+    "sdk"
+  ],
+  "author": {
+    "email": "minsu.kim@hanarin.uk",
+    "name": "Minsu Kim",
+    "url": "https://github.com/kms0219kms"
+  },
+  "contributors": [
+    {
+      "email": "minsu.kim@hanarin.uk",
+      "name": "Minsu Kim",
+      "url": "https://github.com/kms0219kms"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wakgames/Waktaverse-Games-GameSdk-Nodejs/issues"
+  },
+  "scripts": {
+    "fix": "gts fix",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "check": "gts check",
+    "compile": "tsup src/index.ts",
+    "autopublish": "jsr publish --allow-slow-types && pnpm publish --no-git-checks --access public",
+    "prepublish": "pnpm compile",
+    "openapi": "openapi-typescript https://waktaverse.games/api-docs-yaml -o src/types/api.d.ts"
+  },
+  "dependencies": {
+    "openapi-fetch": "^0.9.7"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.12",
+    "gts": "^5.3.0",
+    "jsr": "^0.12.4",
+    "openapi-typescript": "^6.7.6",
+    "tsup": "^8.0.2",
+    "typescript": "~5.4.5"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "sourcemap": true,
+    "treeshake": true,
+    "clean": true,
+    "minify": true,
+    "dts": true
+  },
+  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
+}
