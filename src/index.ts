@@ -12,7 +12,7 @@ import {oauth} from './lib/oauth'; // OAuth 관련 API
  *
  * @example
  * const wakgames = new WakGames({
- *  clientId: 'isol_dia',
+ *  clientId: 'wakttu',
  *  redirectUrl: 'https://example.com/callback',
  * })
  */
@@ -24,10 +24,10 @@ export class WakGames {
   public declare oauth: ReturnType<typeof oauth>;
   private declare _request: RequestInstance;
 
-  constructor(options?: {host: string; clientId: string; redirectUrl: string}) {
-    this.host = options?.host || DEFAULT_HOST;
-    this.clientId = options?.clientId || '';
-    this.redirectUrl = options?.redirectUrl || '';
+  constructor(options: {host?: string; clientId: string; redirectUrl: string}) {
+    this.host = options.host || DEFAULT_HOST;
+    this.clientId = options.clientId;
+    this.redirectUrl = options.redirectUrl;
     this._request = createRequestInstance(this.host);
 
     this._init();
