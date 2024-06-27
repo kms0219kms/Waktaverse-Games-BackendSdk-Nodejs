@@ -40,7 +40,7 @@
     "check": "gts check",
     "compile": "tsup src/index.ts",
     "autopublish": "jsr publish --allow-slow-types && pnpm publish --no-git-checks --access public",
-    "prepublish": "pnpm compile",
+    "prepack": "npm run compile",
     "openapi": "openapi-typescript https://waktaverse.games/api-docs-yaml -o src/types/api.d.ts"
   },
   "dependencies": {
