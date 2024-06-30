@@ -3,12 +3,13 @@ import createRequestInstance, {type RequestInstance} from './common/request';
 
 // Import all API functions
 import {oauth} from './lib/oauth'; // OAuth 관련 API
+import {gameLink} from './lib/game-link'; // 게임 연동 관련 API
 
 /**
  * Waktaverse Games - Backend SDK Class.
  *
  * @param {string} host - Host URL.
- * @default host = "https://waktaverse.games/api"
+ * @default host = "https://waktaverse.games"
  *
  * @example
  * const wakgames = new WakGames({
@@ -22,6 +23,7 @@ export class WakGames {
   redirectUrl: string;
 
   public declare oauth: ReturnType<typeof oauth>;
+  public declare gameLink: ReturnType<typeof gameLink>;
   private declare _request: RequestInstance;
 
   constructor(options: {host?: string; clientId: string; redirectUrl: string}) {
@@ -35,6 +37,13 @@ export class WakGames {
 
   private _init() {
     // init all API functions
-    this.oauth = oauth(this._request, this.clientId, this.redirectUrl);
+    this.oauth = oauth(
+      this._request,
+      this.host,
+      this.clientId,
+      this.redirectUrl
+    );
+
+    this.gameLink = gameLink(this._request);
   }
 }

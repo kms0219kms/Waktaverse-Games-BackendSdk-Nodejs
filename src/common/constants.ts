@@ -1,1 +1,1 @@
-export const DEFAULT_HOST = 'https://waktaverse.games/api';
+export const DEFAULT_HOST = 'https://waktaverse.games';
