@@ -6,13 +6,13 @@
 
 다음을 통해 이 라이브러리에 기여할 수 있습니다.
 
-- [이슈 탭에서 버그 제보하기](https://github.com/WakGames/Waktaverse-Games-GameSdk-Nodejs/issues/new/choose)
-- [새로운 기능 요청/제보하기](https://github.com/WakGames/Waktaverse-Games-GameSdk-Nodejs/issues/new/choose)
-- [이슈 리스트](https://github.com/WakGames/Waktaverse-Games-GameSdk-Nodejs/issues)에서 수정해야 할 내용을 확인하기
+- [이슈 탭에서 버그 제보하기](https://github.com/WakGames/Waktaverse-Games-BackendSdk-Nodejs/issues/new/choose)
+- [새로운 기능 요청/제보하기](https://github.com/WakGames/Waktaverse-Games-BackendSdk-Nodejs/issues/new/choose)
+- [이슈 리스트](https://github.com/WakGames/Waktaverse-Games-BackendSdk-Nodejs/issues)에서 수정해야 할 내용을 확인하기
 
 ## 2. Pull Requests
 
-> [Pull Request 열기](https://github.com/WakGames/Waktaverse-Games-GameSdk-Nodejs/compare) <br/>
+> [Pull Request 열기](https://github.com/WakGames/Waktaverse-Games-BackendSdk-Nodejs/compare) <br/>
 
 PR 요청은 자유롭게 올릴 수 있습니다만, 제목은 다음 형식과 일치해야 합니다:
 

@@ -6,4 +6,4 @@
 
 ## PR Checklist
 
-- [ ] [기여 가이드](https://github.com/WakGames/Waktaverse-Games-GameSdk-Nodejs/blob/master/.github/CONTRIBUTING.md)를 꼼꼼히 읽고 그 규정을 준수하였습니다.
+- [ ] [기여 가이드](https://github.com/WakGames/Waktaverse-Games-BackendSdk-Nodejs/blob/master/.github/CONTRIBUTING.md)를 꼼꼼히 읽고 그 규정을 준수하였습니다.
